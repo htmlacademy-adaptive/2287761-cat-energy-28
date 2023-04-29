@@ -29,76 +29,92 @@
         <h1 class="questionary__title">Подбор программы</h1>
         <p class="questionary__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="questionary__form" action="https://echo.htmlacademy.ru/" method="post">
-          <h2 class="visually-hidden">Основные данные</h2>
-          <label class="field-title" for="pet-name">Имя:*</label>
-          <input class="field" type="text" name="pet-name" id="pet-name" required>
-          <label class="field-title" for="pet-weight">Вес (кг):*</label>
-          <input class="field" type="text" name="pet-weight" id="pet-weight" required>
-          <label class="field-title" for="pet-age">Возраст (лет):</label>
-          <input class="field" type="text" name="pet-age" id="pet-age">
+          <fieldset class="questionary__group">
+            <legend class="visually-hidden">Основные данные</legend>
+            <div class="questionary__field-container">
+              <label class="questionary__field-title field-title" for="pet-name">Имя:*</label>
+              <input class="questionary__field field" type="text" name="pet-name" id="pet-name" required>
+            </div>
+            <div class="questionary__field-container">
+              <label class="questionary__field-title field-title" for="pet-weight">Вес (кг):*</label>
+              <input class="questionary__field field" type="number" name="pet-weight" id="pet-weight" required>
+            </div>
+            <div class="questionary__field-container">
+              <label class="questionary__field-title field-title" for="pet-age">Возраст (лет):</label>
+              <input class="questionary__field field" type="number" name="pet-age" id="pet-age">
+            </div>
+          </fieldset>
           <fieldset class="questionary__group">
             <ul class="questionary__list radio">
               <li class="radio__item">
-                <label class="control">
+                <label class="radio__control">
                   <input class="visually-hidden control-input" type="radio" name="food-type" value="slim" checked>
-                  <span class="control-mark"></span>
-                  <span class="control-label">Похудение</span>
+                  <span class="radio__mark"></span>
+                  <span class="radio__label">Похудение</span>
                 </label>
               </li>
               <li class="radio__item">
-                <label class="control">
+                <label class="radio__control">
                   <input class="visually-hidden control-input" type="radio" name="food-type" value="fat">
-                  <span class="control-mark"></span>
-                  <span class="control-label">Набор массы</span>
+                  <span class="radio__mark"></span>
+                  <span class="radio__label">Набор массы</span>
                 </label>
               </li>
               <li class="radio__item">
-                <label class="control">
+                <label class="radio__control">
                   <input class="visually-hidden control-input" type="radio" name="food-type" value="help">
-                  <span class="control-mark"></span>
-                  <span class="control-label">Не знаю (Нужен ваш совет)</span>
+                  <span class="radio__mark"></span>
+                  <span class="radio__label">Не знаю (Нужен ваш совет)</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <h2 class="questionary__title">Контактные данные (владельца кота)</h2>
-          <label class="field-title" for="email">E-mail:*</label>
-          <input class="field" type="email" name="email" id="email" required>
-          <label class="field-title" for="phone">Телефон:*</label>
-          <input class="field" type="tel" name="phone" id="phone" required>
-          <h2 class="questionary__title">Комментарий</h2>
-          <label>
-            <textarea class="field" name="comment"></textarea>
-          </label>
-          <h2 class="questionary__title">Дополнительно</h2>
           <fieldset class="questionary__group">
+            <legend class="questionary__title">Контактные данные (владельца кота)</legend>
+            <div class="questionary__field-container">
+              <label class="questionary__field-title field-title" for="email">E-mail:*</label>
+              <input class="questionary__field field" type="email" name="email" id="email" required>
+            </div>
+            <div class="questionary__field-container">
+              <label class="questionary__field-title field-title" for="phone">Телефон:*</label>
+              <input class="questionary__field field" type="tel" name="phone" id="phone" required>
+            </div>
+          </fieldset>
+          <fieldset class="questionary__group">
+            <legend class="questionary__title">Комментарий</legend>
+            <label>
+              <textarea class="questionary__field" name="comment"></textarea>
+            </label>
+          </fieldset>
+          <fieldset class="questionary__group">
+            <legend class="questionary__title">Дополнительно</legend>
             <ul class="questionary__list checkbox">
               <li class="checkbox__item">
-                <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="sweetener" checked>
-                  <span class="control-mark"></span>
-                  <span class="control-label">Cахарозаменитель</span>
+                <label class="checkbox__control">
+                  <input class="visually-hidden" type="checkbox" name="sweetener" checked>
+                  <span class="checkbox__mark"></span>
+                  <span class="checkbox__label">Cахарозаменитель</span>
                 </label>
               </li>
               <li class="checkbox__item">
-                <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="milk">
-                  <span class="control-mark"></span>
-                  <span class="control-label">Молоко</span>
+                <label class="checkbox__control">
+                  <input class="visually-hidden" type="checkbox" name="milk">
+                  <span class="checkbox__mark"></span>
+                  <span class="checkbox__label">Молоко</span>
                 </label>
               </li>
               <li class="checkbox__item">
-                <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="water">
-                  <span class="control-mark"></span>
-                  <span class="control-label">Питьевая вода</span>
+                <label class="checkbox__control">
+                  <input class="visually-hidden" type="checkbox" name="water">
+                  <span class="checkbox__mark"></span>
+                  <span class="checkbox__label">Питьевая вода</span>
                 </label>
               </li>
               <li class="checkbox__item">
-                <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="vitamins">
-                  <span class="control-mark"></span>
-                  <span class="control-label">Витамины</span>
+                <label class="checkbox__control">
+                  <input class="visually-hidden" type="checkbox" name="vitamins">
+                  <span class="checkbox__mark"></span>
+                  <span class="checkbox__label">Витамины</span>
                 </label>
               </li>
             </ul>
@@ -111,7 +127,7 @@
     <footer class="main-footer">
       <section class="address">
         <h2 class="visually-hidden">Где нас найти</h2>
-        <div class="address__wrapper adress-plash">
+        <div class="address__wrapper">
           <p class="address__slogan">Приглашаем к сотрудничеству дилеров!</p>
           <address class="address__contacts-address">
             <p class="address__building">ул. Большая Конюшенная, д. 19/8</p>
