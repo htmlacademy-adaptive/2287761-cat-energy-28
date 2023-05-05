@@ -1,0 +1,26 @@
+@use "../mixins.scss";
+
+.food-type__item {
+  background-color: #f2f2f2;
+}
+
+.food-type__list {
+  @include mixins.list-reset;
+}
+
+.food-type__title {
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.food-type__button {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #000000;
+  text-align: center;
+  padding: 4px 47px 4px 0;
+  text-decoration: none;
+}

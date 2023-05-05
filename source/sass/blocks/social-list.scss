@@ -1,0 +1,5 @@
+@use "../mixins.scss";
+
+.social-list {
+  @include mixins.list-reset;
+}

@@ -1,0 +1,29 @@
+.food__wrapper {
+  display: block;
+  width: 320px;
+  height: 302px;
+  background:  linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../../img/background-image/food.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.food__title {
+  color: #ffffff;
+  line-height: 36px;
+  text-align: center;
+}
+
+.food__subtitle {
+  font-family: 'Oswald', sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.food__button {
+  width: 280px;
+  height: 40px;
+}
