@@ -71,7 +71,7 @@
             </ul>
           </fieldset>
           <fieldset class="questionary__group">
-            <legend class="questionary__title title">Контактные данные (владельца кота)</legend>
+            <legend class="questionary__title questionary__title--group-title title">Контактные данные (владельца кота)</legend>
             <div class="questionary__field-container">
               <label class="questionary__field-title" for="email">E-mail:*</label>
               <input class="questionary__field" type="email" name="email" id="email" required>
@@ -82,13 +82,13 @@
             </div>
           </fieldset>
           <fieldset class="questionary__group">
-            <legend class="questionary__title title">Комментарий</legend>
+            <legend class="questionary__title questionary__title--group-title title">Комментарий</legend>
             <label>
               <textarea class="questionary__field" name="comment"></textarea>
             </label>
           </fieldset>
-          <fieldset class="questionary__group">
-            <legend class="questionary__title title">Дополнительно</legend>
+          <fieldset class="questionary__group question-group">
+            <legend class="questionary__title questionary__title--group-title title">Дополнительно</legend>
             <ul class="questionary__list checkbox">
               <li class="checkbox__item">
                 <label class="checkbox__control">
@@ -121,7 +121,7 @@
             </ul>
           </fieldset>
           <button class="questionary__button button" type="submit">Отправить заявку</button>
-          <span>* — Обязательные поля</span>
+          <p class="questionary__footnote">* — Обязательные поля</p>
         </form>
       </section>
     </main>

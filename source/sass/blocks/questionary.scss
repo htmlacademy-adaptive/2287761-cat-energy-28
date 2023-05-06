@@ -1,0 +1,29 @@
+.questionary__title {
+  line-height: 36px;
+
+  &--group-title {
+    font-size: 24px;
+    line-height: 26px;
+  }
+}
+
+.questionary__description {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.questionary__field-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.questionary__footnote {
+  line-height: 16px;
+  text-align: center;
+}
+

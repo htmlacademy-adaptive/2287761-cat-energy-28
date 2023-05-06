@@ -2,7 +2,7 @@
   display: block;
   width: 320px;
   height: 302px;
-  background:  linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../../img/background-image/food.jpg);
+  background: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/background-image/food.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -15,7 +15,7 @@
 }
 
 .food__subtitle {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   color: #ffffff;
   font-size: 14px;
   line-height: 14px;
