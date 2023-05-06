@@ -1,5 +1,9 @@
 @use "../mixins.scss";
 
+.food-type {
+  padding: 0 20px 20px 20px;
+}
+
 .food-type__item {
   background-color: #f2f2f2;
 }

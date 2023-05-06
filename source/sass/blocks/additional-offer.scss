@@ -1,4 +1,15 @@
 .additional-offer {
+  padding: 0 20px 35px 20px;
+}
+
+.additional-offer__container {
   background: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/background-image/additional-offer.jpg");
   background-size: cover;
+  padding: 188px 62px 44px 58px;
+}
+
+.additional-offer__description {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
 }
