@@ -1,1 +1,26 @@
-// Начните писать стили здесь
+// Базовые стили
+@use "./base/fonts.scss";
+@use "./base/base.scss";
+@use "./base/button.scss";
+
+//Блоки компонентов
+@use "./blocks/food-type.scss";
+@use "./blocks/example.scss";
+@use "./blocks/main-footer.scss";
+@use "./blocks/address.scss";
+@use "./blocks/product-card.scss";
+@use "./blocks/additional-offer.scss";
+@use "./blocks/main-navigation.scss";
+@use "./blocks/site-list.scss";
+@use "./blocks/food.scss";
+@use "./blocks/how-it-works.scss";
+@use "./blocks/social-list.scss";
+@use "./blocks/questionary.scss";
+@use "./blocks/radio.scss";
+@use "./blocks/checkbox.scss";
+@use "./blocks/catalog-products.scss";
+@use "./blocks/product-list.scss";
+@use "./blocks/additional-product.scss";
+@use "./blocks/additional-product-card.scss";
+@use "./blocks/additional-product-list.scss";
+@use "./blocks/main-header.scss";

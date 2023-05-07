@@ -1,0 +1,21 @@
+.product-card {
+  background-color: #f2f2f2;
+
+  &--secondary {
+    background-color: transparent;
+    border: 2px solid #f2f2f2;
+  }
+}
+
+.product-card__title {
+  font-size: 16px;
+  line-height: 20px;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.product-card__description {
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+}
