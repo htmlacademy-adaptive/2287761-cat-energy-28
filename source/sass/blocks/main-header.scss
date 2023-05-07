@@ -7,12 +7,12 @@
 
 @media (min-width: variables.$tablet-width) {
   .main-header {
-    height: 54px;
+    min-height: 54px;
   }
 }
 
 @media (min-width: variables.$desktop-width) {
   .main-header {
-    height: 109px;
+    min-height: 109px;
   }
 }

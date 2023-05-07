@@ -1,15 +1,15 @@
 @use "../variables.scss";
 
-// .visually-hidden {
-//   position: absolute;
-//   width: 1px;
-//   height: 1px;
-//   margin: -1px;
-//   padding: 0;
-//   border: 0;
-//   clip: rect(0 0 0 0);
-//   overflow: hidden;
-// }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 img {
   max-width: 100%;
@@ -57,6 +57,6 @@ img {
 @media (min-width: variables.$desktop-width) {
   .page__content-container {
     width: 1440px;
-    padding: 0 55px;
+    padding: 0 110px;
   }
 }
