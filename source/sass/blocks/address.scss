@@ -1,6 +1,8 @@
+@use "../variables.scss";
+
 .address {
   background-color: #f2f2f2;
-  padding: 26px 20px;
+  padding: 26px 0;
 
   &--secondary {
     background-color: #ffffff;
@@ -8,17 +10,56 @@
 }
 
 .address__slogan {
+  width: 139px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: #111111;
+  margin: 0;
 }
 
 .address__building,
 .address__city {
+  width: 139px;
   font-size: 14px;
   line-height: 20px;
   color: #444444;
   font-style: normal;
+  margin: 0;
+}
+
+.address__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.address__map {
+  width: 100%;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .address__slogan {
+    width: 172px;
+  }
+
+  .address__building,
+  .address__city {
+    width: 160px;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .address__slogan {
+    width: 163px;
+  }
+
+  .address__building,
+  .address__city {
+    width: 175px;
+  }
+
+  .address {
+    width: 565px;
+  }
 }
