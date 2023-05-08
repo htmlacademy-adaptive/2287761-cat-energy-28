@@ -1,5 +1,29 @@
 @use "../mixins.scss";
+@use "../variables.scss";
 
 .product-list {
   @include mixins.list-reset;
+}
+
+.product-list__item:not(:last-child) {
+  margin-bottom: 19px;
+}
+
+.product-list__item:last-child {
+  padding-top: 17px;
+  margin-bottom: 0;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+}
+
+@media (min-width: variables.$tablet-width) {
+  .product-list {
+    gap: 63px 80px;
+  }
 }
