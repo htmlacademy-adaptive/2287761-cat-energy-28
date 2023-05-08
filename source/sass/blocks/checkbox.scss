@@ -1,7 +1,56 @@
+@use "../mixins.scss";
+@use "../variables.scss";
+
+.checkbox {
+  @include mixins.list-reset;
+  margin-bottom: 34px;
+}
+
+.checkbox__item:not(:last-child) {
+  margin-bottom: 13px;
+}
+
 .checkbox__label {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: #000000;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 32px;
+    margin-bottom: 54px;
+  }
+
+  .checkbox__item {
+    display: inline-block;
+    width: 221px;
+  }
+
+  .checkbox__item:nth-child(2n+1) {
+    margin-right: 123px;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .checkbox__item {
+    width: auto;
+    margin-bottom: 61px;
+  }
+
+  .checkbox__item:nth-child(1) {
+    margin-right: 104px;
+  }
+
+  .checkbox__item:nth-child(2) {
+    margin-right: 136px;
+  }
+
+  .checkbox__item:nth-child(3) {
+    margin-right: 197px;
+  }
 }
