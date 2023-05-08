@@ -58,4 +58,8 @@
     padding: 41px 61px 55px 52px;
     margin: 0;
   }
+
+  .food-type__item:not(:last-child) {
+    margin-bottom: 0;
+  }
 }

@@ -1,4 +1,5 @@
 @use "../mixins.scss";
+@use "../variables.scss";
 
 .how-it-works {
   padding-bottom: 50px;
@@ -14,4 +15,51 @@
 
 .how-it-works__description {
   color: #444444;
+  padding-left: 80px;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .how-it-works__list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 38px;
+  }
+
+  .how-it-works__item {
+    width: 230px;
+    margin-right: 124px;
+  }
+
+  .how-it-works__description {
+    padding: 0;
+  }
+
+  .how-it-works__count {
+    display: block;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .how-it-works__item {
+    margin: 0;
+  }
+
+  .how-it-works__item:first-child {
+    width: 230px;
+    margin-right: 94px;
+  }
+
+  .how-it-works__item:nth-child(2) {
+    width: 246px;
+    margin-right: 77px;
+  }
+
+  .how-it-works__item:nth-child(3) {
+    width: 246px;
+    margin-right: 77px;
+  }
+
+  .how-it-works__item:nth-child(4) {
+    width: 250px;
+  }
 }
