@@ -1,5 +1,20 @@
 @use "../mixins.scss";
+@use "../variables.scss";
 
 .additional-product-list {
   @include mixins.list-reset;
+  margin-bottom: 35px;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .additional-product-list {
+    margin-bottom: 69px;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .additional-product-list {
+    width: 896px;
+    margin-bottom: 0;
+  }
 }

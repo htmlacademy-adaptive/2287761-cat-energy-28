@@ -1,6 +1,8 @@
+@use "../variables.scss";
+
 .example {
   background-color: #eaeaea;
-  padding: 25px 20px 40px 20px;
+  padding: 25px 0 40px 0;
 }
 
 .example__achievement {
@@ -8,6 +10,7 @@
   font-size: 24px;
   line-height: 24px;
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .example__achievement-description {
@@ -17,6 +20,7 @@
   color: #444444;
   background-color: #eaeaea;
   text-align: center;
+  margin: 0;
 }
 
 .example__total {
@@ -25,4 +29,61 @@
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
+}
+
+.example__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.example__item {
+  width: 124px;
+  padding: 15px 22px 0 22px;
+}
+
+
+@media (min-width: variables.$tablet-width) {
+  .example {
+    background-color: #ffffff;
+  }
+
+  .example__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .example__item {
+    width: 162px;
+    padding: 15px 30px 0 30px;
+  }
+
+  .example__achievement-description {
+    background-color: #ffffff;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .example__main-container {
+    display: flex;
+  }
+
+  .example__container {
+    width: 436px;
+    margin-right: 224px;
+  }
+
+  .example__wrapper {
+    display: block;
+  }
+
+  .example__list {
+    justify-content: stretch;
+  }
+
+  .example__item:nth-child(2n+1) {
+    margin-right: 42px;
+  }
 }
