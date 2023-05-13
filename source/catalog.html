@@ -9,22 +9,24 @@
   <body class="page__body">
     <div class="page__content-container">
       <header class="main-header">
-        <a href="#" class="main-header__logo logo">
+        <a href="/index.html" class="main-header__logo logo">
           <img src="img/logo/logo-header.svg" width ="101px" height="18px" alt="Логотип Cat energy.">
         </a>
-        <nav class="main-navigation">
+        <nav class="main-navigation main-navigation--closed main-navigation--nojs">
           <button class="main-navigation__toggle"><span class="visually-hidden">Меню</span></button>
-          <ul class="main-navigation__list site-list">
-            <li class="site-list__item">
-              <a href="/index.html">Главная</a>
-            </li>
-            <li class="site-list__item site-list__item--current">
-              <a href="#">Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a href="/form.html">Подбор программы</a>
-            </li>
-          </ul>
+          <div class="main-navigation__wrapper">
+            <ul class="main-navigation__list site-list">
+              <li class="site-list__item">
+                <a href="/index.html">Главная</a>
+              </li>
+              <li class="site-list__item site-list__item--current">
+                <a href="#">Каталог продукции</a>
+              </li>
+              <li class="site-list__item">
+                <a href="/form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </header>
       <main class="main-container">
@@ -250,5 +252,6 @@
         </a>
       </footer>
     </div>
+    <script src="js/script-navigation-toggle.js"></script>
   </body>
 </html>

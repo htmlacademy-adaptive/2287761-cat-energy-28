@@ -1,8 +1,16 @@
 @use "../variables.scss";
 
 .main-header {
-  padding: 10px 0 18px 0;
-  height: 66px;
+  min-height: 66px;
+}
+
+.main-header__logo {
+  display: flex;
+  min-height: 66px;
+}
+
+.main-header__logo img {
+  margin: 0 auto;
 }
 
 @media (min-width: variables.$tablet-width) {
