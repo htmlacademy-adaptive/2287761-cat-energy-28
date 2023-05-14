@@ -15,6 +15,7 @@
     justify-content: flex-start;
     font-size: 18px;
     line-height: 24px;
+    font-weight: 400;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -106,7 +107,9 @@
 }
 
 .site-list--secondary .site-list__item--current::after {
-  background-color: #ffffff;
+  @media (min-width: variables.$desktop-width) {
+    background-color: #ffffff;
+  }
 }
 
 .site-list .site-list__item:last-child.site-list__item--current::after {

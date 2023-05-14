@@ -46,6 +46,11 @@ img {
   color: inherit;
   font-weight: 400;
   margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 @media (min-width: variables.$tablet-width) {

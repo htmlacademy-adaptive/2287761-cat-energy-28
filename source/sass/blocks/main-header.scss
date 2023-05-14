@@ -2,15 +2,19 @@
 
 .main-header {
   min-height: 66px;
+  padding-bottom: 27px;
 
   @media (min-width: variables.$tablet-width) {
     min-height: 52px;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 64px;
   }
 
   @media (min-width: variables.$desktop-width) {
+    align-items: flex-end;
     min-height: 109px;
+    padding-bottom: 0;
   }
 }
 
@@ -30,5 +34,26 @@
     padding-left: 90px;
     background: url("../../img/icon/icon-logo-mobile-header.svg") no-repeat center left;
     margin: 0 auto;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 52px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-height: 59px;
+  }
+}
+
+.main-header__logo img {
+  width: 101px;
+  height: 66px;
+
+  @media (min-width: variables.$tablet-width) {
+    height: 52px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    height: 59px;
   }
 }
