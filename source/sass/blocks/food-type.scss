@@ -3,6 +3,14 @@
 
 .food-type {
   padding-bottom: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-bottom: 71px;
+  }
 }
 
 .food-type__list {
