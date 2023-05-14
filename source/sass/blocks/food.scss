@@ -17,6 +17,18 @@
   background-position: center center;
   background-size: cover;
   z-index: -1;
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    display: block;
+    top: -109px;
+    left: 50%;
+    width: 720px;
+    height: 694px;
+  }
 }
 
 .food__title {
@@ -40,10 +52,6 @@
 }
 
 @media (min-width: variables.$tablet-width) {
-  .food__wrapper {
-    display: none;
-  }
-
   .food__title,
   .food__subtitle {
     color: #000000;

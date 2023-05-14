@@ -2,6 +2,16 @@
 
 .main-header {
   min-height: 66px;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 52px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-height: 109px;
+  }
 }
 
 .main-header__logo {
@@ -11,16 +21,4 @@
 
 .main-header__logo img {
   margin: 0 auto;
-}
-
-@media (min-width: variables.$tablet-width) {
-  .main-header {
-    min-height: 54px;
-  }
-}
-
-@media (min-width: variables.$desktop-width) {
-  .main-header {
-    min-height: 109px;
-  }
 }

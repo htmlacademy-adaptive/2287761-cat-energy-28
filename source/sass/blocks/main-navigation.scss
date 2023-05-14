@@ -4,6 +4,15 @@
   position: relative;
   width: auto;
   background-color: #ffffff;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-color: transparent;
+  }
 }
 
 .main-navigation__toggle {
@@ -21,6 +30,10 @@
   &:hover,
   &:active {
     background-color: darken(#ffffff, 20%);
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
   }
 }
 
@@ -91,8 +104,4 @@
     z-index: 10;
     background-color: #ffffff;
   }
-}
-
-@media (min-width: variables.$tablet-width) {
-
 }
