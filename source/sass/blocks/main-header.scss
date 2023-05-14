@@ -17,8 +17,18 @@
 .main-header__logo {
   display: flex;
   min-height: 66px;
-}
 
-.main-header__logo img {
-  margin: 0 auto;
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    padding-left: 90px;
+    background: url("../../img/icon/icon-logo-mobile-header.svg") no-repeat center left;
+    margin: 0 auto;
+  }
 }
