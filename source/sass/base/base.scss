@@ -34,6 +34,7 @@ img {
 }
 
 .page__content-container {
+  position: relative;
   width: 320px;
   padding: 0 20px;
   margin: 0 auto;
@@ -63,3 +64,10 @@ img {
   }
 }
 
+.logo {
+  display: block;
+
+  img {
+    display: block;
+  }
+}

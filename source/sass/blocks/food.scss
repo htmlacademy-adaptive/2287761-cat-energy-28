@@ -1,16 +1,15 @@
 @use "../variables.scss";
 
 .food {
-  position: relative;
   padding-bottom: 20px;
 
   @media (min-width: variables.$tablet-width) {
+    padding-top: 0;
     padding-bottom: 526px;
   }
 
   @media (min-width: variables.$desktop-width) {
     min-height: 668px;
-    padding-top: 114px;
     padding-bottom: 82px;
   }
 }
@@ -18,7 +17,7 @@
 .food__wrapper {
   position: absolute;
   top: 0;
-  left: -20px;
+  left: 0;
   display: block;
   width: 320px;
   height: 302px;
@@ -47,6 +46,7 @@
   color: #ffffff;
   line-height: 36px;
   text-align: center;
+  padding-top: 27px;
   margin-bottom: 25px;
 
   @media (max-width: variables.$mobile-width-only) {
@@ -60,12 +60,14 @@
     line-height: 60px;
     color: #000000;
     text-align: left;
+    padding-top: 0;
     margin-left: 98px;
     margin-bottom: 40px;
   }
 
   @media (min-width: variables.$desktop-width) {
     max-width: 50%;
+    padding-top: 114px;
     margin-left: 80px;
     margin-bottom: 40px;
   }
@@ -110,7 +112,7 @@
 
   @media (min-width: variables.$desktop-width) {
     top: 32px;
-    left: 448px;
+    left: 558px;
   }
 }
 

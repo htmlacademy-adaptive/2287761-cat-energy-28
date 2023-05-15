@@ -2,19 +2,28 @@
 
 .main-header {
   min-height: 66px;
-  padding-bottom: 27px;
 
   @media (min-width: variables.$tablet-width) {
-    min-height: 52px;
+    min-height: 54px;
+    padding-bottom: 62px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    display: flex;
+    align-items: flex-end;
+    min-height: 109px;
+    padding-bottom: 0;
+  }
+}
+
+.main-header__container {
+  @media (min-width: variables.$tablet-width) {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 64px;
   }
 
   @media (min-width: variables.$desktop-width) {
     align-items: flex-end;
-    min-height: 109px;
-    padding-bottom: 0;
   }
 }
 
