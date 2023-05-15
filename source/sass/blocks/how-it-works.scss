@@ -7,6 +7,10 @@
   @media (min-width: variables.$tablet-width) {
     padding-bottom: 90px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-bottom: 69px;
+  }
 }
 
 .how-it-works__title {
