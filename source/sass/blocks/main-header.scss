@@ -5,14 +5,12 @@
 
   @media (min-width: variables.$tablet-width) {
     min-height: 54px;
-    padding-bottom: 62px;
   }
 
   @media (min-width: variables.$desktop-width) {
     display: flex;
     align-items: flex-end;
     min-height: 109px;
-    padding-bottom: 0;
   }
 }
 
