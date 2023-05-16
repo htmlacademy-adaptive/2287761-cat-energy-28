@@ -110,7 +110,7 @@
     }
 
     @media (min-width: variables.$desktop-width) {
-      margin-bottom: 0;
+      margin-bottom: 20px;
     }
   }
 
@@ -136,6 +136,20 @@
     @media (min-width: variables.$desktop-width) {
       width: 572px;
     }
+  }
+
+  &:hover .questionary__field {
+    border-color: #cdcdcd;
+  }
+
+  &:focus .questionary__field {
+    border: 2px solid #444444;
+  }
+}
+
+.questionary__group .questionary__field-container--email {
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -191,6 +205,17 @@
       line-height: 30px;
     }
   }
+
+  &:disabled,
+  &--disabled {
+    border: 2px solid #ff8282;
+    background-color: transparent;
+    cursor: default;
+
+    &:hover {
+      border: 2px solid #ff8282;
+    }
+  }
 }
 
 textarea.questionary__field {
@@ -207,6 +232,14 @@ textarea.questionary__field {
 
   @media (min-width: variables.$desktop-width) {
     margin-bottom: 67px;
+  }
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border: 2px solid #444444;
   }
 }
 
