@@ -19,23 +19,35 @@
   cursor: pointer;
 
   @media (min-width: variables.$tablet-width) {
-    height: 54px;
+    height: 40px;
     padding: 14px 26px;
     font-size: 20px;
     line-height: 20px;
   }
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: #5eaa2f;
   }
 
-  &:active {
-    background-color: #5eaa2f;
+  &:active:not(:disabled) {
     color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
   }
 
   &--secondary {
     background-color: #f2f2f2;
     color: #444444;
+
+    &:hover:not(:disabled) {
+      background-color: #ebebeb;
+    }
+
+    &:active:not(:disabled) {
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 }

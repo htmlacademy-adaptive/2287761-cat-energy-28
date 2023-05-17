@@ -27,9 +27,9 @@
   }
 
   &--group-title {
+    position: relative;
     display: block;
     max-width: 207px;
-    position: relative;
     font-size: 24px;
     line-height: 26px;
     padding-right: 20px;
@@ -52,19 +52,21 @@
       content: "";
       position: absolute;
       top: 16px;
-      left: 100%;
+      left: 0;
       display: block;
       height: 2px;
-      width: 1440px;
+      width: 300px;
       background-color: #68b738;
       z-index: -1;
 
       @media (min-width: variables.$tablet-width) {
         left: -30px;
+        width: 768px;
       }
 
       @media (min-width: variables.$desktop-width) {
         left: -110px;
+        width: 1440px;
       }
     }
   }
@@ -269,6 +271,7 @@ textarea.questionary__field {
 
   @media (min-width: variables.$tablet-width) {
     width: 282px;
+    height: 52px;
     margin-right: 64px;
     margin-bottom: 0;
   }

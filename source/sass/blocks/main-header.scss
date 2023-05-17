@@ -1,6 +1,7 @@
 @use "../variables.scss";
 
 .main-header {
+  position: relative;
   min-height: 66px;
 
   @media (min-width: variables.$tablet-width) {
@@ -11,6 +12,22 @@
     display: flex;
     align-items: flex-end;
     min-height: 109px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    display: block;
+    height: 1px;
+    width: 320px;
+    background-color: #d9d9d9;
+    transform: translateX(-50%);
+
+    @media (min-width: variables.$tablet-width) {
+      display: none;
+    }
   }
 }
 
