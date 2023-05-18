@@ -1,12 +1,83 @@
+@use "../variables.scss";
+
 .main-footer {
   background-color: #f2f2f2;
   padding-bottom: 40px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-bottom: 66px;
+  }
+}
+
+.main-footer__container {
+  margin-bottom: 40px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 66px;
+  }
+}
+
+.main-footer_wrapper {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.main-footer__logo {
+  margin-bottom: 40px;
+  color: #111111;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: #3e3e3e;
+  }
+
+  &:active {
+    color: #6b6b6b;
+  }
+
+  svg {
+    margin: 0 auto;
+  }
 }
 
 .main-footer__developer-logo {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 16px;
   line-height: 19px;
   color: #444444;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    svg {
+      color: #68b738;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    span {
+      margin-right: 28px;
+    }
+  }
 }

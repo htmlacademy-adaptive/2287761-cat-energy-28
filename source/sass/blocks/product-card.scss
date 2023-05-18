@@ -1,7 +1,115 @@
 @use "../variables.scss";
 
 .product-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 11px 0 14px 0;
   background-color: #ffffff;
+
+  @media (min-width: variables.$tablet-width) {
+    display: block;
+    width: 324px;
+    padding: 161px 36px 39px;
+    background-color: #f2f2f2;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 245px;
+    padding: 162px 32px 40px;
+  }
+
+  &--secondary {
+    display: block;
+    padding: 70px 0 0 0;
+
+    @media (min-width: variables.$tablet-width) {
+      display: flex;
+      flex-direction: column;
+      background-color: transparent;
+      border: 2px solid #f2f2f2;
+      padding: 161px 38px 38px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding: 160px 38px 41px;
+    }
+  }
+
+  &--secondary .product-card__plus-image {
+    position: absolute;
+    top: 17px;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    transform: translateX(-50%);
+    background: url("../../img/icon/plus.svg") no-repeat center;
+
+    @media (min-width: variables.$tablet-width) {
+      top: 52px;
+      width: 60px;
+      height: 60px;
+    }
+
+    @media (min-width: variables.$tablet-width) {
+      top: 51px;
+    }
+  }
+
+  &--secondary .product-card__title {
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 8px;
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 0 50px;
+      margin-bottom: 23px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding: 0 0;
+    }
+  }
+
+  &--secondary .product-card__description:not(:last-child) {
+    display: block;
+    text-align: center;
+    margin-bottom: 21px;
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 0 40px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding: 0 0;
+    }
+  }
+
+  &--secondary .product-card__button {
+    @media (min-width: variables.$tablet-width) {
+      margin-top: auto;
+    }
+  }
+
+  &--secondary .product-card__description::after {
+    display: none;
+  }
+}
+
+.product-card__image {
+  grid-column: 1 / 2;
+
+  @media (min-width: variables.$tablet-width) {
+    position: absolute;
+    top: -73px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.product-card__container {
+  grid-column: 2 / 3;
 }
 
 .product-card__title {
@@ -9,29 +117,77 @@
   line-height: 20px;
   color: #222222;
   text-transform: uppercase;
+  padding-right: 44px;
+  margin-bottom: 18px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    padding: 0 50px;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    font-size: 20px;
+    line-height: 21px;
+    padding: 0 25px;
+  }
 }
 
 .product-card__description {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
   font-size: 12px;
   line-height: 16px;
   color: #444444;
-}
+  margin: 0;
+  margin-bottom: 3px;
 
-@media (min-width: variables.$tablet-width) {
-  .product-card {
-    display: block;
-    width: 324px;
-    background-color: #f2f2f2;
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+  }
 
-    &--secondary {
-      background-color: transparent;
-      border: 2px solid #f2f2f2;
+  &:not(:last-child) {
+    margin-bottom: 3px;
+
+    @media (min-width: variables.$tablet-width) {
+      margin-bottom: 14px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 22px;
+
+    @media (min-width: variables.$tablet-width) {
+      margin-bottom: 42px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 1px;
+    background-color: #cdcdcd;
+
+    @media (min-width: variables.$tablet-width) {
+      display: block;
     }
   }
 }
 
-@media (min-width: variables.$tablet-width) {
-  .product-card {
-    width: 245px;
-  }
+.product-card__button {
+  grid-column: 1 / -1;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 26px;
 }

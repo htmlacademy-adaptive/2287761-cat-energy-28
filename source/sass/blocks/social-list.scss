@@ -1,5 +1,37 @@
 @use "../mixins.scss";
+@use "../variables.scss";
 
 .social-list {
   @include mixins.list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.social-list__item {
+  margin-right: 24px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social-list__button {
+  display: flex;
+  color: #666666;
+
+  &:hover,
+  &:focus {
+    color: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

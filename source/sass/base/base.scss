@@ -12,6 +12,7 @@
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -34,9 +35,20 @@ img {
 }
 
 .page__content-container {
+  position: relative;
   width: 320px;
   padding: 0 20px;
   margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 768px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 1440px;
+    padding: 0 110px;
+  }
 }
 
 .title {
@@ -46,18 +58,18 @@ img {
   color: inherit;
   font-weight: 400;
   margin: 0;
-}
 
-@media (min-width: variables.$tablet-width) {
-  .page__content-container {
-    width: 768px;
-    padding: 0 30px;
+  @media (min-width: variables.$tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
   }
 }
 
-@media (min-width: variables.$desktop-width) {
-  .page__content-container {
-    width: 1440px;
-    padding: 0 110px;
+.logo {
+  display: block;
+
+  img,
+  svg {
+    display: block;
   }
 }

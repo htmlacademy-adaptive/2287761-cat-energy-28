@@ -3,8 +3,103 @@
 
 .radio {
   @include mixins.list-reset;
+  position: relative;
   padding: 22px 0 19px 0;
   margin-bottom: 26px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 25px 28px;
+    border: 1px solid #e7e7e7;
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 0;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    display: block;
+    height: 1px;
+    width: calc(100% + 40px);
+    background-color: #d9d9d9;
+
+    @media (min-width: variables.$tablet-width) {
+      display: none;
+    }
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    top: 100%;
+  }
+}
+
+.radio__item:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+.radio__control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+  padding-left: 45px;
+  cursor: pointer;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 40px;
+    padding-left: 60px;
+  }
+
+  &:hover .radio__mark {
+    border-color: #bababa;
+  }
+
+  &:has(.radio__input:disabled),
+  &:has(.radio__input--disabled) {
+    opacity: 0.3;
+  }
+}
+
+.radio__mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.radio__input:checked + .radio__mark::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 13px;
+  width: 13px;
+  top: 50%;
+  left: 50%;
+  background-color: #68b738;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: variables.$tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .radio__label {
@@ -13,22 +108,9 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #222222;
-}
 
-.radio__item:not(:last-child) {
-  margin-bottom: 13px;
-}
-
-@media (min-width: variables.$tablet-width) {
-  .radio {
-    padding: 25px 28px;
-    border: 1px solid #e7e7e7;
-    margin-bottom: 75px;
-  }
-}
-
-@media (min-width: variables.$desktop-width) {
-  .radio {
-    margin-bottom: 0;
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
