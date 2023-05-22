@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="main-header">
       <div class="page__content-container">
         <div class="main-header__container">
           <a href="#" class="main-header__logo logo">
-            <img src="img/logo/logo-header.svg" width ="101px" height="18px" alt="Логотип Cat energy.">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo/logo-header-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo/logo-header-tablet.svg">
+              <img src="img/logo/logo-header.svg" width ="101px" height="18px" alt="Логотип Cat energy.">
+            </picture>
           </a>
           <nav class="main-header__navigation main-navigation main-navigation--closed main-navigation--nojs">
             <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Меню</span></button>
@@ -39,7 +47,11 @@
             питание для котов</h1>
           <p class="food__subtitle">Занялся собой? Займись котом!</p>
           <div class="food__wrapper"></div>
-          <img class="food__image" src="img/index/food.png" width ="280px" height="270px" alt="Питание для кошек Cat Energy.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/index/food-desktop.png 1x, img/index/food-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index/food-tablet.png 1x, img/index/food-tablet@2x.png 2x">
+            <img class="food__image" src="img/index/food.png" srcset="img/index/food@2x.png 2x" width="280px" height="270px" alt="Питание для кошек Cat Energy.">
+          </picture>
           <a href="/catalog.html" class="food__button button">Подобрать программу</a>
         </div>
       </section>
@@ -105,8 +117,14 @@
               </div>
             </div>
             <div class="example__slider image-compare">
-              <img class="image-compare__before" src="img/compare-slider/cat-before.png" width ="280px" height="256px" alt="Толстый кот.">
-              <img class="image-compare__after" src="img/compare-slider/cat-after.png" width ="280px" height="256px" alt="Худой кот.">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/compare-slider/cat-before-tablet.png 1x, img/compare-slider/cat-before-tablet@2x.png 2x">
+                <img class="image-compare__before" src="img/compare-slider/cat-before.png" srcset="img/compare-slider/cat-before@2x.png 2x" width ="280px" height="256px" alt="Толстый кот.">
+              </picture>
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/compare-slider/cat-after-tablet.png 1x, img/compare-slider/cat-after-tablet@2x.png 2x">
+                <img class="image-compare__after" src="img/compare-slider/cat-after.png" srcset="img/compare-slider/cat-after@2x.png 2x" width ="280px" height="256px" alt="Худой кот.">
+              </picture>
               <button class="image-compare__button compare-button" type="button"><span class="visually-hidden">Кнопка сравнения котов</span></button>
             </div>
           </div>
@@ -115,14 +133,16 @@
     </main>
     <footer class="main-footer">
       <section class="main-footer__container address">
-        <div class="address__container address__container--secondary">
-          <h2 class="visually-hidden">Где нас найти</h2>
-          <div class="address__wrapper">
-            <p class="address__slogan">Приглашаем к сотрудничеству дилеров!</p>
-            <address class="address__contacts-address">
-              <p class="address__building">ул. Большая Конюшенная, д. 19/8</p>
-              <p class="address__city">Санкт-Петербург</p>
-            </address>
+        <div class="page__content-container">
+          <div class="address__container address__container--secondary">
+            <h2 class="visually-hidden">Где нас найти</h2>
+            <div class="address__wrapper">
+              <p class="address__slogan">Приглашаем к сотрудничеству дилеров!</p>
+              <address class="address__contacts-address">
+                <p class="address__building">ул. Большая Конюшенная, д. 19/8</p>
+                <p class="address__city">Санкт-Петербург</p>
+              </address>
+            </div>
           </div>
         </div>
         <iframe

@@ -80,4 +80,9 @@
 .address iframe {
   border: none;
   display: block;
+  width: 100vw;
+
+  @media (min-width: variables.$tablet-width) {
+    height: 400px;
+  }
 }

@@ -29,6 +29,12 @@
     background-position: center center, -34px 0;
   }
 
+  @media (min-resolution: 2dppx) {
+    background: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/background-image/additional-offer@2x.jpg");
+    background-position: center center, 0 -294px;
+    background-size: cover;
+  }
+
   &::before {
     content: "";
     position: absolute;

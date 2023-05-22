@@ -1,0 +1,11 @@
+@use "../variables.scss";
+
+.image-compare__before,
+.image-compare__after {
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+}
