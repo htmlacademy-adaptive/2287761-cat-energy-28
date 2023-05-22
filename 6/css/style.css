@@ -628,8 +628,12 @@ img {
   }
 }
 
-.address {
-  position: relative;
+@media (min-width: 1440px) {
+  .address__content-container {
+    position: relative;
+    width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 .address__container {
