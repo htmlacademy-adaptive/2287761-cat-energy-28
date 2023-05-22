@@ -1,7 +1,11 @@
 @use "../variables.scss";
 
-.address {
-  position: relative;
+.address__content-container {
+  @media (min-width: variables.$desktop-width) {
+    position: relative;
+    width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 .address__container {
