@@ -57,7 +57,8 @@
     top: 21px;
     width: 50px;
     height: 53px;
-    background: url("../../img/icon/cat-slim.svg") no-repeat center center;
+    background: url("../img/icon/cat-slim.svg") no-repeat center center;
+    background-size: cover;
 
     @media (max-width: variables.$mobile-width-only) {
       left: 22px;
@@ -82,7 +83,8 @@
     top: 24px;
     width: 67px;
     height: 50px;
-    background: url("../../img/icon/cat-pro.svg") no-repeat center center;
+    background: url("../img/icon/cat-pro.svg") no-repeat center center;
+    background-size: cover;
 
     @media (max-width: variables.$mobile-width-only) {
       left: 13px;
@@ -153,18 +155,18 @@
   text-align: center;
   padding: 4px 47px 4px 0;
   text-decoration: none;
-  background: url("../../img/icon/button-arrow.svg") no-repeat 98px center;
+  background: url("../img/icon/button-arrow.svg") no-repeat 98px center;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 20px;
     line-height: 30px;
     padding: 4px 57px 4px 0;
-    background: url("../../img/icon/button-arrow.svg") no-repeat 129px center;
+    background: url("../img/icon/button-arrow.svg") no-repeat 129px center;
   }
 
   @media (min-width: variables.$desktop-width) {
     padding: 4px 60px 4px 0;
-    background: url("../../img/icon/button-arrow.svg") no-repeat 133px center;
+    background: url("../img/icon/button-arrow.svg") no-repeat 133px center;
   }
 
   &:active {

@@ -66,12 +66,15 @@
     @media (min-width: variables.$tablet-width) {
       position: static;
       margin-bottom: 31px;
+      width: 80px;
+      height: 80px;
     }
   }
 
   &--healthy {
     &::before {
-      background: url("../../img/icon/healthy.svg") no-repeat center center;
+      background: url("../img/icon/healthy.svg") no-repeat center center;
+      background-size: cover;
     }
 
     @media (min-width: variables.$desktop-width) {
@@ -82,7 +85,8 @@
 
   &--powder {
     &::before {
-      background: url("../../img/icon/powder.svg") no-repeat center center;
+      background: url("../img/icon/powder.svg") no-repeat center center;
+      background-size: cover;
     }
 
     @media (min-width: variables.$desktop-width) {
@@ -93,7 +97,8 @@
 
   &--food {
     &::before {
-      background: url("../../img/icon/food.svg") no-repeat center center;
+      background: url("../img/icon/food.svg") no-repeat center center;
+      background-size: cover;
     }
 
     @media (min-width: variables.$desktop-width) {
@@ -104,7 +109,8 @@
 
   &--weigher {
     &::before {
-      background: url("../../img/icon/weigher.svg") no-repeat center center;
+      background: url("../img/icon/weigher.svg") no-repeat center center;
+      background-size: cover;
     }
 
     @media (min-width: variables.$desktop-width) {
