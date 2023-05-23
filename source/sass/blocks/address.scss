@@ -1,7 +1,11 @@
 @use "../variables.scss";
 
-.address {
-  position: relative;
+.address__content-container {
+  @media (min-width: variables.$desktop-width) {
+    position: relative;
+    width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 .address__container {
@@ -80,4 +84,9 @@
 .address iframe {
   border: none;
   display: block;
+  width: 100vw;
+
+  @media (min-width: variables.$tablet-width) {
+    height: 400px;
+  }
 }

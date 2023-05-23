@@ -22,7 +22,7 @@
   display: block;
   width: 320px;
   height: 302px;
-  background: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/background-image/food.jpg");
+  background: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/background-image/bg-food.jpg");
   background-repeat: no-repeat;
   background-position: center center, -141px center;
   background-size: cover, 170%;
@@ -40,6 +40,19 @@
     height: 694px;
     background-position: center center, -20px center;
     background-size: cover, 147%;
+
+    @media (min-resolution: 2dppx) {
+      background: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/background-image/bg-food@2x.jpg");
+      background-size: cover, 147%;
+      background-position: center center, -20px center;
+    }
+  }
+
+  @media (min-resolution: 2dppx) {
+    background: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/background-image/bg-food@2x.jpg");
+    background-size: cover, 170%;
+    background-position: center center, -141px center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -109,11 +122,15 @@
     z-index: -1;
     top: 201px;
     left: 0;
+    width: 709px;
+    height: 609px;
   }
 
   @media (min-width: variables.$desktop-width) {
     top: 32px;
     left: 558px;
+    width: 552px;
+    height: 499px;
   }
 }
 
