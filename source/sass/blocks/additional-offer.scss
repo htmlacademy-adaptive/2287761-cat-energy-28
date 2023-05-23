@@ -14,7 +14,7 @@
 
 .additional-offer__container {
   position: relative;
-  background: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/background-image/additional-offer.jpg");
+  background: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background-image/additional-offer.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 188px 61px 44px 57px;
@@ -30,7 +30,7 @@
   }
 
   @media (min-resolution: 2dppx) {
-    background: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/background-image/additional-offer@2x.jpg");
+    background: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background-image/additional-offer@2x.jpg");
     background-position: center center, 0 -294px;
     background-size: cover;
   }
@@ -43,12 +43,15 @@
     display: block;
     width: 78px;
     height: 80px;
-    background: url("../../img/icon/gift.svg");
+    background: url("../img/icon/gift.svg");
+    background-size: cover;
     transform: translateX(-50%);
 
     @media (min-width: variables.$tablet-width) {
       top: 57px;
       left: 77px;
+      width: 80px;
+      height: 83px;
     }
 
     @media (min-width: variables.$desktop-width) {
