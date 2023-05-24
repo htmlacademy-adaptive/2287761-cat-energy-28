@@ -45,6 +45,7 @@
 .main-header__logo {
   display: flex;
   min-height: 66px;
+  align-items: center;
 
   &:hover,
   &:focus {
@@ -72,7 +73,7 @@
 
 .main-header__logo img {
   width: 101px;
-  height: 66px;
+  height: 18px;
 
   @media (min-width: variables.$tablet-width) {
     width: 174px;

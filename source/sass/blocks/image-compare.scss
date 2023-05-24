@@ -1,11 +1,74 @@
 @use "../variables.scss";
 
-.image-compare__before,
-.image-compare__after {
+.image-compare {
+  position: relative;
+  width: 280px;
+  height: 256px;
   margin: 0 auto;
 
   @media (min-width: variables.$tablet-width) {
     width: 560px;
     height: 512px;
   }
+}
+
+.image-compare__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image-compare__wrapper {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 4px;
+    height: 100%;
+    background-color: #666666;
+    border-radius: 2px;
+  }
+}
+
+.image-compare__before,
+.image-compare__after {
+  @media (min-width: variables.$tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.image-compare__before {
+  background-color: #eaeaea;
+
+  @media (min-width: variables.$tablet-width) {
+    background-image: linear-gradient(to bottom, #ffffff 150px, #eaeaea 150px);
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-image: linear-gradient(to bottom, #ffffff 146px, #eaeaea 146px);
+  }
+}
+
+.image-compare__button {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  display: block;
+  width: 40px;
+  height: 40px;
+  transform: translate(50%, -50%);
+  border: none;
+  background: none;
+  background-image: url("../img/icon/sprite/compare-button.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  cursor: pointer;
 }
