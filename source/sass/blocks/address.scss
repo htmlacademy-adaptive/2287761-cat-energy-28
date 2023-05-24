@@ -84,7 +84,7 @@
 .address iframe {
   border: none;
   display: block;
-  width: 100vw;
+  width: 100%;
 
   @media (min-width: variables.$tablet-width) {
     height: 400px;
