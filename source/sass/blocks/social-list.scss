@@ -26,16 +26,17 @@
   display: flex;
   width: 28px;
   height: 22px;
-  mask-image: url("../img/sprite.svg#youtube");
-  mask-size: 28px 22px;
-  background-color: #666666;
 
-  &:hover,
-  &:focus {
-    background-color: #68b738;
+  &:hover use,
+  &:focus use {
+    filter: grayscale(0);
   }
 
   &:active {
     opacity: 0.3;
   }
+}
+
+.social-list__button use {
+  filter: grayscale(1);
 }

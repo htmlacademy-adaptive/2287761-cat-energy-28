@@ -1,0 +1,15 @@
+@use "../variables.scss";
+
+.title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 40px;
+  color: inherit;
+  font-weight: 400;
+  margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}

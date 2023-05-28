@@ -2,7 +2,7 @@
 @use "../variables.scss";
 
 .how-it-works {
-  padding-bottom: 74px;
+  padding-bottom: 50px;
 
   @media (min-width: variables.$tablet-width) {
     padding-bottom: 90px;
@@ -40,14 +40,24 @@
 
   @media (min-width: variables.$tablet-width) {
     display: block;
-    width: 230px;
-    margin-right: 124px;
+    width: 249px;
     margin-bottom: 0;
-    padding: 40px 26px 57px 0;
+    padding: 40px 0 57px;
   }
 
   @media (min-width: variables.$desktop-width) {
+    margin-right: 124px;
     margin-bottom: 0;
+  }
+
+  &:nth-child(odd) {
+    @media (min-width: variables.$tablet-width) {
+      margin-right: 136px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      margin-right: 97px;
+    }
   }
 
   &:last-child {
@@ -74,9 +84,34 @@
   &--healthy {
     &::before {
       background: url("../img/icon/healthy.svg") no-repeat center center;
-      background-size: cover;
+      background-color: #68b738;
     }
+  }
 
+  &--powder {
+    &::before {
+      background: url("../img/icon/powder.svg") no-repeat center center;
+      background-color: #68b738;
+    }
+  }
+
+  &--food {
+    &::before {
+      background: url("../img/icon/food.svg") no-repeat center center;
+      background-color: #68b738;
+    }
+  }
+
+  &--weigher {
+    &::before {
+      background: url("../img/icon/weigher.svg") no-repeat center center;
+      background-color: #68b738;
+    }
+  }
+}
+
+.how-it-works__list .how-it-works__item {
+  &--healthy {
     @media (min-width: variables.$desktop-width) {
       width: 230px;
       margin-right: 94px;
@@ -84,11 +119,6 @@
   }
 
   &--powder {
-    &::before {
-      background: url("../img/icon/powder.svg") no-repeat center center;
-      background-size: cover;
-    }
-
     @media (min-width: variables.$desktop-width) {
       width: 246px;
       margin-right: 77px;
@@ -96,25 +126,15 @@
   }
 
   &--food {
-    &::before {
-      background: url("../img/icon/food.svg") no-repeat center center;
-      background-size: cover;
-    }
-
     @media (min-width: variables.$desktop-width) {
       width: 246px;
-      margin-right: 77px;
+      margin-right: 80px;
     }
   }
 
   &--weigher {
-    &::before {
-      background: url("../img/icon/weigher.svg") no-repeat center center;
-      background-size: cover;
-    }
-
     @media (min-width: variables.$desktop-width) {
-      width: 250px;
+      width: 246px;
       margin-right: 0;
     }
   }
@@ -133,9 +153,13 @@
 
   @media (min-width: variables.$tablet-width) {
     position: absolute;
-    top: -40px;
-    right: 26px;
+    top: 0;
+    right: 4px;
     display: block;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    right: -6px;
   }
 }
 

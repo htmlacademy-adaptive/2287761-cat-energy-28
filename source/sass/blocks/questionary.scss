@@ -5,11 +5,21 @@
   overflow: hidden;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 65px 0 72px 0;
+    padding: 61px 0 72px 0;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 74px 0 82px 0;
+    padding: 78px 0 82px 0;
+  }
+}
+
+.questionary__container {
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0;
   }
 }
 
@@ -41,34 +51,57 @@
       font-size: 36px;
       line-height: 36px;
       padding: 0 40px;
+      margin-left: -40px;
       margin-bottom: 76px;
     }
 
     @media (min-width: variables.$desktop-width) {
       max-width: 800px;
+      min-width: 250px;
     }
 
     &::before {
-      content: "";
       position: absolute;
       top: 16px;
-      left: 0;
       display: block;
       height: 2px;
-      width: 300px;
+      width: 100vw;
       background-color: #68b738;
       z-index: -1;
 
       @media (min-width: variables.$tablet-width) {
-        left: -30px;
-        width: 768px;
+        content: "";
+        top: 20px;
+        left: -700px;
       }
 
       @media (min-width: variables.$desktop-width) {
-        left: -110px;
-        width: 1440px;
+        content: "";
+        left: -1000px;
       }
     }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 100%;
+      display: block;
+      height: 2px;
+      width: 100vw;
+      background-color: #68b738;
+      z-index: -1;
+
+      @media (min-width: variables.$tablet-width) {
+        top: 20px;
+      }
+    }
+  }
+}
+
+.questionary__group .questionary__title--additional {
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 57px;
   }
 }
 
@@ -100,6 +133,7 @@
 }
 
 .questionary__field-container {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
@@ -120,7 +154,7 @@
     margin-bottom: 24px;
 
     @media (min-width: variables.$tablet-width) {
-      margin-bottom: 72px;
+      margin-bottom: 70px;
     }
 
     @media (min-width: variables.$desktop-width) {
@@ -129,29 +163,48 @@
   }
 
   &--email {
-    padding-right: 36px;
-
     @media (min-width: variables.$desktop-width) {
       width: 536px;
     }
   }
 
   &--phone {
-    padding-right: 36px;
-
     @media (min-width: variables.$desktop-width) {
       width: 572px;
     }
   }
 
+  &--email .questionary__field-title,
+  &--phone .questionary__field-title {
+    @media (min-width: variables.$tablet-width) {
+      margin-right: 20px;
+    }
+  }
+
   &--email .questionary__field {
-    padding-right: 40px;
-    background: url("../img/icon/email.svg") no-repeat calc(100% - 16px) center;
+    padding-left: 12px;
+
+    @media (min-width: variables.$tablet-width) {
+      padding-left: 20px;
+    }
   }
 
   &--phone .questionary__field {
+    padding-left: 12px;
     padding-right: 40px;
-    background: url("../img/icon/phone.svg") no-repeat calc(100% - 16px) center;
+
+    @media (min-width: variables.$tablet-width) {
+      padding-left: 20px;
+      margin-right: 20px;
+    }
+  }
+
+  &--email .questionary__field-wrapper {
+    mask-image: url("../img/icon/email.svg");
+  }
+
+  &--phone .questionary__field-wrapper {
+    mask-image: url("../img/icon/phone.svg");
   }
 
   &:hover .questionary__field {
@@ -160,6 +213,36 @@
 
   &:focus .questionary__field {
     border: 2px solid #444444;
+  }
+
+  &:hover .questionary__field:disabled,
+  &:hover .questionary__field--disabled,
+  &:active .questionary__field:disabled,
+  &:active .questionary__field--disabled,
+  &:focus .questionary__field:disabled,
+  &:focus .questionary__field--disabled {
+    border-color: #ff8282;
+    outline: none;
+  }
+
+  &--email:hover .questionary__field-wrapper,
+  &--phone:hover .questionary__field-wrapper {
+    background-color: #68b738;
+  }
+}
+
+.questionary__field-wrapper {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  right: 18px;
+  mask-size: 20px 20px;
+  background-color: #000000;
+  transform: translateY(-50%);
+
+  @media (min-width: variables.$tablet-width) {
+    right: 15px;
   }
 }
 
@@ -188,6 +271,7 @@
   @media (min-width: variables.$tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-right: 15px;
   }
 }
 
@@ -204,6 +288,8 @@
   border: 1px solid #e7e7e7;
 
   @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
     height: 52px;
     padding: 11px 20px;
   }
@@ -232,6 +318,16 @@
       border: 2px solid #ff8282;
     }
   }
+
+  &:disabled + .questionary__field-wrapper,
+  &--disabled + .questionary__field-wrapper {
+    background-color: #ff8282;
+  }
+
+  &:disabled:hover + .questionary__field-wrapper,
+  &--disabled:hover + .questionary__field-wrapper {
+    background-color: #ff8282;
+  }
 }
 
 textarea.questionary__field {
@@ -243,11 +339,11 @@ textarea.questionary__field {
   @media (min-width: variables.$tablet-width) {
     height: 174px;
     padding: 10px 20px;
-    margin-bottom: 65px;
+    margin-bottom: 59px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin-bottom: 67px;
+    margin-bottom: 63px;
   }
 
   &:hover {
@@ -267,11 +363,14 @@ textarea.questionary__field {
 }
 
 .questionary__button {
+  font-size: 16px;
+  line-height: 20px;
   margin-bottom: 21px;
 
   @media (min-width: variables.$tablet-width) {
     width: 282px;
     height: 52px;
+    font-size: 20px;
     margin-right: 64px;
     margin-bottom: 0;
   }

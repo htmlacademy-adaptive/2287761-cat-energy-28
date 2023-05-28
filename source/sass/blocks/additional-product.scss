@@ -1,15 +1,15 @@
 @use "../variables.scss";
 
 .additional-product {
-  padding: 25px 0 36px 0;
+  padding: 25px 0 32px;
   overflow: hidden;
 
   @media (min-width: variables.$tablet-width) {
     padding-top: 0;
-    padding-bottom: 76px;
+    padding-bottom: 75px;
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: variables.$desktop-width) {
     padding-bottom: 86px;
   }
 }
@@ -21,39 +21,55 @@
   max-width: 248px;
   padding-right: 21px;
   background-color: #ffffff;
-  margin-bottom: 49px;
+  margin-bottom: 36px;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    max-width: 430px;
+    max-width: 411px;
     padding: 0 36px;
     margin-bottom: 80px;
   }
 
   @media (min-width: variables.$desktop-width) {
+    margin-left: -36px;
     margin-bottom: 81px;
   }
 
   &::before {
-    content: "";
     position: absolute;
     top: 16px;
-    left: 0;
     display: block;
     height: 2px;
-    width: 300px;
+    width: 100vw;
     background-color: #68b738;
     z-index: -1;
 
     @media (min-width: variables.$tablet-width) {
-      left: -30px;
-      width: 768px;
+      content: "";
+      top: 20px;
+      left: -700px;
     }
 
     @media (min-width: variables.$desktop-width) {
-      left: -110px;
-      width: 1440px;
+      content: "";
+      left: -1000px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 100%;
+    display: block;
+    height: 2px;
+    width: 100vw;
+    background-color: #68b738;
+    z-index: -1;
+
+    @media (min-width: variables.$tablet-width) {
+      top: 20px;
     }
   }
 }

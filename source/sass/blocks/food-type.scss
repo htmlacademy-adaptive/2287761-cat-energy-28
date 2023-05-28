@@ -40,7 +40,11 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+
+    @media (min-width: variables.$tablet-width) {
+      margin-bottom: 30px;
+    }
 
     @media (min-width: variables.$desktop-width) {
       margin-bottom: 0;
@@ -161,7 +165,7 @@
     font-size: 20px;
     line-height: 30px;
     padding: 4px 57px 4px 0;
-    background: url("../img/icon/button-arrow.svg") no-repeat 129px center;
+    background: url("../img/icon/button-arrow.svg") no-repeat 132px center;
   }
 
   @media (min-width: variables.$desktop-width) {

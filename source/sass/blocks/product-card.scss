@@ -16,7 +16,7 @@
 
   @media (min-width: variables.$desktop-width) {
     width: 245px;
-    padding: 162px 32px 40px;
+    padding: 165px 32px 40px;
   }
 
   &--secondary {
@@ -28,11 +28,11 @@
       flex-direction: column;
       background-color: transparent;
       border: 2px solid #f2f2f2;
-      padding: 161px 38px 38px;
+      padding: 158px 38px 38px;
     }
 
     @media (min-width: variables.$desktop-width) {
-      padding: 160px 38px 41px;
+      padding: 160px 38px 40px;
     }
   }
 
@@ -69,6 +69,7 @@
 
     @media (min-width: variables.$desktop-width) {
       padding: 0 0;
+      margin-bottom: 26px;
     }
   }
 
@@ -121,26 +122,47 @@
   grid-column: 2 / 3;
 }
 
+.product-card__link {
+  text-decoration: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover .product-card__title,
+  &:focus .product-card__title {
+    color: #68b738;
+  }
+
+  &:focus .product-card__title {
+    outline: 2px solid #000000;
+  }
+
+  &:active .product-card__title {
+    opacity: 0.3;
+  }
+}
+
 .product-card__title {
   font-size: 16px;
   line-height: 20px;
   color: #222222;
   text-transform: uppercase;
   padding-right: 44px;
-  margin-bottom: 18px;
+  margin-bottom: 17px;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 20px;
     line-height: 24px;
     text-align: center;
     padding: 0 50px;
-    margin-bottom: 21px;
+    margin-bottom: 22px;
   }
 
   @media (min-width: variables.$desktop-width) {
     font-size: 20px;
     line-height: 21px;
-    padding: 0 25px;
+    padding: 0 23px 0 28px;
   }
 }
 
@@ -152,14 +174,19 @@
   line-height: 16px;
   color: #444444;
   margin: 0;
-  margin-bottom: 3px;
 
   @media (min-width: variables.$tablet-width) {
+    width: 246px;
     font-size: 16px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 168px;
   }
 
   &:not(:last-child) {
-    margin-bottom: 3px;
+    margin-bottom: 0;
 
     @media (min-width: variables.$tablet-width) {
       margin-bottom: 14px;
@@ -171,10 +198,10 @@
   }
 
   &:last-child {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 
     @media (min-width: variables.$tablet-width) {
-      margin-bottom: 42px;
+      margin-bottom: 45px;
     }
   }
 
@@ -199,4 +226,13 @@
   font-size: 16px;
   line-height: 20px;
   padding: 10px 26px;
+
+  @media (min-width: variables.$desktop-width) {
+    width: 168px;
+    margin: 0 auto;
+  }
+}
+
+.product-card__button--nojs {
+  display: none;
 }
