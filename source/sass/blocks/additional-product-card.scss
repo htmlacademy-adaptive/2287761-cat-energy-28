@@ -16,8 +16,7 @@
     grid-template-columns: 610px 244px;
     justify-content: space-between;
     align-items: center;
-    padding-top: 15px;
-    padding-bottom: 17px;
+    padding: 15px 0 17px;
     border: none;
   }
 
@@ -50,11 +49,10 @@
 
   @media (min-width: variables.$desktop-width) {
     display: grid;
-    grid-template-columns: 245px 285px;
+    grid-template-columns: 161px 285px;
     justify-content: space-between;
     row-gap: 40px;
     margin-bottom: 0;
-    margin-right: 40px;
   }
 }
 
@@ -105,6 +103,11 @@
   @media (min-width: variables.$tablet-width) {
     font-size: 16px;
     line-height: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    text-align: left;
   }
 }
 
@@ -113,6 +116,12 @@
 
   @media (min-width: variables.$desktop-width) {
     margin-right: 0;
+  }
+}
+
+.additional-product-card__price {
+  @media (min-width: variables.$tablet-width) {
+    min-width: 42px;
   }
 }
 

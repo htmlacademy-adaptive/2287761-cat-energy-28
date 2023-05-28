@@ -1,14 +1,14 @@
 @use "../variables.scss";
 
 .catalog-products {
-  padding: 27px 0 25px 0;
+  padding: 27px 0 25px;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 65px 0 68px 0;
+    padding: 62px 0 68px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 74px 0 76px 0;
+    padding: 78px 0 76px;
   }
 }
 

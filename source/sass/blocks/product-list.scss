@@ -7,11 +7,11 @@
   @media (min-width: variables.$tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    gap: 141px 60px;
+    gap: 140px 60px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    gap: 144px 80px;
+    gap: 142px 80px;
   }
 }
 
@@ -27,11 +27,12 @@
     content: "";
     position: absolute;
     top: calc(100% + 11px);
-    left: -20px;
+    left: 50%;
     display: block;
     height: 1px;
-    width: calc(100% + 40px);
+    width: 100vw;
     background-color: #d9d9d9;
+    transform: translateX(-50%);
 
     @media (min-width: variables.$tablet-width) {
       display: none;
@@ -43,11 +44,12 @@
       content: "";
       position: absolute;
       top: -8px;
-      left: -20px;
+      left: 50%;
       display: block;
       height: 1px;
-      width: calc(100% + 40px);
+      width: 100vw;
       background-color: #d9d9d9;
+      transform: translateX(-50%);
 
       @media (min-width: variables.$tablet-width) {
         display: none;

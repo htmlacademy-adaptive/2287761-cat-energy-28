@@ -9,6 +9,9 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -43,109 +46,113 @@
     <main class="main-container">
       <section class="questionary">
         <div class="page__content-container">
-          <h1 class="questionary__title title">Подбор программы</h1>
-          <p class="questionary__description">Заполните анкету, и мы подберем<br>
-            программу питания для вашего кота</p>
-          <form class="questionary__form" action="https://echo.htmlacademy.ru/" method="post">
-            <div class="questionary__form-container">
-              <fieldset class="questionary__group questionary__group--half-screen">
-                <legend class="visually-hidden">Основные данные</legend>
-                <div class="questionary__field-container">
-                  <label class="questionary__field-title" for="pet-name">Имя:*</label>
-                  <input class="questionary__field" placeholder="Барсик" type="text" name="pet-name" id="pet-name" required>
-                </div>
-                <div class="questionary__field-container">
-                  <label class="questionary__field-title" for="pet-weight">Вес (кг):*</label>
-                  <input class="questionary__field" placeholder="7" type="number" name="pet-weight" id="pet-weight" required>
-                </div>
-                <div class="questionary__field-container">
-                  <label class="questionary__field-title" for="pet-age">Возраст (лет):</label>
-                  <input class="questionary__field" placeholder="7" type="number" name="pet-age" id="pet-age">
+          <div class="questionary__container">
+            <h1 class="questionary__title title">Подбор программы</h1>
+            <p class="questionary__description">Заполните анкету, и мы подберем<br>
+              программу питания для вашего кота</p>
+            <form class="questionary__form" action="https://echo.htmlacademy.ru/" method="post">
+              <div class="questionary__form-container">
+                <fieldset class="questionary__group questionary__group--half-screen">
+                  <legend class="visually-hidden">Основные данные</legend>
+                  <div class="questionary__field-container">
+                    <label class="questionary__field-title" for="pet-name">Имя:*</label>
+                    <input class="questionary__field" placeholder="Барсик" type="text" name="pet-name" id="pet-name" required>
+                  </div>
+                  <div class="questionary__field-container">
+                    <label class="questionary__field-title" for="pet-weight">Вес&nbsp;(кг):*</label>
+                    <input class="questionary__field" placeholder="7" type="number" name="pet-weight" id="pet-weight" required>
+                  </div>
+                  <div class="questionary__field-container">
+                    <label class="questionary__field-title" for="pet-age">Возраст&nbsp;(лет):</label>
+                    <input class="questionary__field" placeholder="7" type="number" name="pet-age" id="pet-age">
+                  </div>
+                </fieldset>
+                <fieldset class="questionary__group questionary__group--half-screen">
+                  <ul class="questionary__list radio">
+                    <li class="radio__item">
+                      <label class="radio__control">
+                        <input class="radio__input visually-hidden" type="radio" name="food-type" value="slim" checked>
+                        <span class="radio__mark"></span>
+                        <span class="radio__label">Похудение</span>
+                      </label>
+                    </li>
+                    <li class="radio__item">
+                      <label class="radio__control">
+                        <input class="radio__input visually-hidden" type="radio" name="food-type" value="fat">
+                        <span class="radio__mark"></span>
+                        <span class="radio__label">Набор массы</span>
+                      </label>
+                    </li>
+                    <li class="radio__item">
+                      <label class="radio__control">
+                        <input class="radio__input visually-hidden" type="radio" name="food-type" value="help">
+                        <span class="radio__mark"></span>
+                        <span class="radio__label">Не знаю (Нужен ваш совет)</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+              <fieldset class="questionary__group">
+                <legend class="questionary__title questionary__title--group-title title">Контактные данные (владельца кота)</legend>
+                <div class="questionary__form-container">
+                  <div class="questionary__field-container questionary__field-container--email">
+                    <label class="questionary__field-title" for="email">E-mail:*</label>
+                    <input class="questionary__field" placeholder="kuklachev@gmail.com" type="email" name="email" id="email" required>
+                    <div class="questionary__field-wrapper"></div>
+                  </div>
+                  <div class="questionary__field-container questionary__field-container--phone">
+                    <label class="questionary__field-title" for="phone">Телефон:*</label>
+                    <input class="questionary__field" placeholder="8 (960) 900-60-90" type="tel" name="phone" id="phone" required>
+                    <div class="questionary__field-wrapper"></div>
+                  </div>
                 </div>
               </fieldset>
-              <fieldset class="questionary__group questionary__group--half-screen">
-                <ul class="questionary__list radio">
-                  <li class="radio__item">
-                    <label class="radio__control">
-                      <input class="radio__input visually-hidden" type="radio" name="food-type" value="slim" checked>
-                      <span class="radio__mark"></span>
-                      <span class="radio__label">Похудение</span>
+              <fieldset class="questionary__group">
+                <legend class="questionary__title questionary__title--group-title title">Комментарий</legend>
+                <label>
+                  <textarea class="questionary__field" placeholder="Расскажите обо всех повАдках кота" name="comment"></textarea>
+                </label>
+              </fieldset>
+              <fieldset class="questionary__group">
+                <legend class="questionary__title questionary__title--group-title questionary__title--additional title">Дополнительно</legend>
+                <ul class="questionary__list checkbox">
+                  <li class="checkbox__item">
+                    <label class="checkbox__control">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="sweetener" checked>
+                      <span class="checkbox__mark"></span>
+                      <span class="checkbox__label">Cахарозаменитель</span>
                     </label>
                   </li>
-                  <li class="radio__item">
-                    <label class="radio__control">
-                      <input class="radio__input visually-hidden" type="radio" name="food-type" value="fat">
-                      <span class="radio__mark"></span>
-                      <span class="radio__label">Набор массы</span>
+                  <li class="checkbox__item">
+                    <label class="checkbox__control">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="water">
+                      <span class="checkbox__mark"></span>
+                      <span class="checkbox__label">Питьевая вода</span>
                     </label>
                   </li>
-                  <li class="radio__item">
-                    <label class="radio__control">
-                      <input class="radio__input visually-hidden" type="radio" name="food-type" value="help">
-                      <span class="radio__mark"></span>
-                      <span class="radio__label">Не знаю (Нужен ваш совет)</span>
+                  <li class="checkbox__item">
+                    <label class="checkbox__control">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="milk">
+                      <span class="checkbox__mark"></span>
+                      <span class="checkbox__label">Молоко</span>
+                    </label>
+                  </li>
+                  <li class="checkbox__item">
+                    <label class="checkbox__control">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="vitamins">
+                      <span class="checkbox__mark"></span>
+                      <span class="checkbox__label">Витамины</span>
                     </label>
                   </li>
                 </ul>
               </fieldset>
-            </div>
-            <fieldset class="questionary__group">
-              <legend class="questionary__title questionary__title--group-title title">Контактные данные (владельца кота)</legend>
-              <div class="questionary__form-container">
-                <div class="questionary__field-container questionary__field-container--email">
-                  <label class="questionary__field-title" for="email">E-mail:*</label>
-                  <input class="questionary__field" placeholder="kuklachev@gmail.com" type="email" name="email" id="email" required>
-                </div>
-                <div class="questionary__field-container questionary__field-container--phone">
-                  <label class="questionary__field-title" for="phone">Телефон:*</label>
-                  <input class="questionary__field" placeholder="8 (960) 900-60-90" type="tel" name="phone" id="phone" required>
-                </div>
+              <div class="questionary__button-container">
+                <button class="questionary__button button" type="submit">Отправить заявку</button>
+                <p class="questionary__footnote">* &mdash; Обязательные поля</p>
               </div>
-            </fieldset>
-            <fieldset class="questionary__group">
-              <legend class="questionary__title questionary__title--group-title title">Комментарий</legend>
-              <label>
-                <textarea class="questionary__field" placeholder="Расскажите обо всех повАдках кота" name="comment"></textarea>
-              </label>
-            </fieldset>
-            <fieldset class="questionary__group">
-              <legend class="questionary__title questionary__title--group-title title">Дополнительно</legend>
-              <ul class="questionary__list checkbox">
-                <li class="checkbox__item">
-                  <label class="checkbox__control">
-                    <input class="checkbox__input visually-hidden" type="checkbox" name="sweetener" checked>
-                    <span class="checkbox__mark"></span>
-                    <span class="checkbox__label">Cахарозаменитель</span>
-                  </label>
-                </li>
-                <li class="checkbox__item">
-                  <label class="checkbox__control">
-                    <input class="checkbox__input visually-hidden" type="checkbox" name="milk">
-                    <span class="checkbox__mark"></span>
-                    <span class="checkbox__label">Молоко</span>
-                  </label>
-                </li>
-                <li class="checkbox__item">
-                  <label class="checkbox__control">
-                    <input class="checkbox__input visually-hidden" type="checkbox" name="water">
-                    <span class="checkbox__mark"></span>
-                    <span class="checkbox__label">Питьевая вода</span>
-                  </label>
-                </li>
-                <li class="checkbox__item">
-                  <label class="checkbox__control">
-                    <input class="checkbox__input visually-hidden" type="checkbox" name="vitamins">
-                    <span class="checkbox__mark"></span>
-                    <span class="checkbox__label">Витамины</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <div class="questionary__button-container">
-              <button class="questionary__button button" type="submit">Отправить заявку</button>
-              <p class="questionary__footnote">* — Обязательные поля</p>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </section>
     </main>
@@ -155,7 +162,7 @@
           <div class="address__container address__container--secondary">
             <h2 class="visually-hidden">Где нас найти</h2>
             <div class="address__wrapper">
-              <p class="address__slogan">Приглашаем к сотрудничеству дилеров!</p>
+              <p class="address__slogan">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
               <address class="address__contacts-address">
                 <p class="address__building">ул. Большая Конюшенная, д. 19/8</p>
                 <p class="address__city">Санкт-Петербург</p>
@@ -164,20 +171,29 @@
           </div>
         </div>
         <iframe
-          class="adress__map"
+          class="address__map address__map--nojs"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787672859!2d30.320472477925634!3d59.93871647491515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1684172297849!5m2!1sru!2sru"
           width="320"
           height="362"
           allowfullscreen>
         </iframe>
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/address/location-desktop.webp 1x, img/address/location-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/address/location-tablet.webp 1x, img/address/location-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/address/location.webp 1x, img/address/location@2x.webp 2x">
+          <source media="(min-width: 1440px)" srcset="img/address/location-desktop.jpg 1x, img/address/location-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/address/location-tablet.jpg 1x, img/address/location-tablet@2x.jpg 2x">
+          <img class="address__map" src="img/address/location.jpg" srcset="img/address/location@2x.jpg 2x" width ="320" height="362" alt="Как нас найти.">
+        </picture>
       </section>
       <div class="page__content-container">
-        <div class="main-footer_wrapper">
+        <div class="main-footer__wrapper">
           <a href="#" class="main-footer__logo logo">
             <span class="visually-hidden">Логотип Cat energy</span>
-            <svg width="143" height="27">
-              <use xlink:href="img/sprite.svg#footer-logo"></use>
-            </svg>
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/logo/logo-footer-tablet.svg">
+              <img src="img/logo/logo-footer.svg" width ="128" height="24" alt="Логотип Cat energy.">
+            </picture>
           </a>
           <ul class="main-footer__list social-list">
             <li class="social-list__item">

@@ -3,7 +3,7 @@
 
 .checkbox {
   @include mixins.list-reset;
-  padding-bottom: 34px;
+  padding-bottom: 33px;
 
   @media (min-width: variables.$tablet-width) {
     display: flex;
@@ -96,6 +96,10 @@
     width: 40px;
     height: 40px;
   }
+}
+
+.checkbox__input:focus + .checkbox__mark {
+  outline: 2px solid #000000;
 }
 
 .checkbox__input:checked + .checkbox__mark::before {
