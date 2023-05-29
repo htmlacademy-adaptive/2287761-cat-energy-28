@@ -23,6 +23,7 @@
     width: 565px;
     background-color: #ffffff;
     padding: 61px 60px 56px 80px;
+    z-index: 1;
   }
 
   &--secondary {
@@ -85,6 +86,16 @@
 .address__wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+.address__map-container {
+  position: relative;
+}
+
+.address__map-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .address__map {
