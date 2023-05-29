@@ -23,6 +23,7 @@
     width: 565px;
     background-color: #ffffff;
     padding: 61px 60px 56px 80px;
+    z-index: 1;
   }
 
   &--secondary {
@@ -87,6 +88,17 @@
   justify-content: space-between;
 }
 
+.address__map-container {
+  position: relative;
+}
+
+.address__map-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .address__map {
   border: none;
   display: block;
@@ -96,8 +108,4 @@
   @media (min-width: variables.$tablet-width) {
     height: 400px;
   }
-}
-
-iframe.address__map--nojs {
-  display: none;
 }
