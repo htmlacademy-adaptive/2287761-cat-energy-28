@@ -262,8 +262,7 @@
               <span class="product-card__plus-image"></span>
               <h2 class="product-card__title title">Показать еще 100500 товаров</h2>
               <p class="product-card__description">На самом деле вкусов гораздо больше!</p>
-              <button class="product-card__button product-card__button--nojs button button--secondary" type="button">Показать все</button>
-              <a href="#" class="product-card__button button button--secondary">Показать все</button>
+              <a href="#" class="product-card__button button button--secondary">Показать все</a>
             </li>
           </ul>
         </div>
@@ -338,20 +337,24 @@
           </div>
         </div>
         <iframe
-          class="address__map address__map--nojs"
+          class="address__map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787672859!2d30.320472477925634!3d59.93871647491515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1684172297849!5m2!1sru!2sru"
           width="320"
           height="362"
           allowfullscreen>
         </iframe>
-        <picture>
-          <source type="image/webp" media="(min-width: 1440px)" srcset="img/address/location-desktop.webp 1x, img/address/location-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/address/location-tablet.webp 1x, img/address/location-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/address/location.webp 1x, img/address/location@2x.webp 2x">
-          <source media="(min-width: 1440px)" srcset="img/address/location-desktop.jpg 1x, img/address/location-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/address/location-tablet.jpg 1x, img/address/location-tablet@2x.jpg 2x">
-          <img class="address__map" src="img/address/location.jpg" srcset="img/address/location@2x.jpg 2x" width ="320" height="362" alt="Как нас найти.">
-        </picture>
+        <noscript>
+          <div class="address__map">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/address/location-desktop.webp 1x, img/address/location-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/address/location-tablet.webp 1x, img/address/location-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/address/location.webp 1x, img/address/location@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/address/location-desktop.jpg 1x, img/address/location-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/address/location-tablet.jpg 1x, img/address/location-tablet@2x.jpg 2x">
+              <img class="address__map address__map--nojs" src="img/address/location.jpg" srcset="img/address/location@2x.jpg 2x" width ="320" height="362" alt="Как нас найти.">
+            </picture>
+          </div>
+        </noscript>
       </section>
       <div class="page__content-container">
         <div class="main-footer__wrapper">
